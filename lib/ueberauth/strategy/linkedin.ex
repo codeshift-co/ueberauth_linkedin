@@ -7,7 +7,8 @@ defmodule Ueberauth.Strategy.LinkedIn do
 
   use Ueberauth.Strategy,
     uid_field: :id,
-    default_scope: "r_liteprofile r_emailaddress"
+    default_scope: "r_liteprofile r_emailaddress",
+    ignores_csrf_attack: true
 
   alias Ueberauth.Auth.Info
   alias Ueberauth.Auth.Credentials
